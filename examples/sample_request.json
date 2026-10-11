@@ -1,0 +1,12 @@
+{
+  "course_name": "Python for Data Engineering",
+  "issue_date": "2026-10-01",
+  "issuer": "Acme Academy",
+  "recipients": [
+    {"name": "Asha Rao", "email": "asha@example.com"},
+    {"name": "Rahul Mehta", "email": "rahul@example.com"},
+    {"name": "Priya Singh", "email": "priya@example.com"},
+    {"name": "", "email": "not-an-email"},
+    {"name": "Asha R.", "email": "ASHA@example.com"}
+  ]
+}
