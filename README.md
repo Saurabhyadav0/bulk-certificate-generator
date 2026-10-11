@@ -2,7 +2,7 @@
 
 A backend API that takes a list of recipients in **one request**, validates each one, generates a PDF certificate for every valid recipient from a single predefined template, tracks progress, and serves the generated certificates one at a time or as a ZIP.
 
-**Stack:** Python 3.11+ · FastAPI · SQLAlchemy 2 · SQLite (any SQLAlchemy-supported RDBMS works) · ReportLab · pytest
+**Stack:** Python 3.11+ (tested on 3.11 and 3.14) · FastAPI · SQLAlchemy 2 · SQLite (any SQLAlchemy-supported RDBMS works) · ReportLab · pytest
 
 ---
 
@@ -37,7 +37,7 @@ uvicorn app.main:app --reload
 ```
 
 - API: http://127.0.0.1:8000
-- Interactive docs (Swagger UI): http://127.0.0.1:8000/docs. You can try every endpoint from the browser.
+- Interactive docs (Swagger UI): http://127.0.0.1:8000/docs. You can try every endpoint from the browser. `POST /api/v1/jobs` has an **Examples** dropdown with ready-made requests (all valid, some invalid, all invalid, malformed, long name), and the PDF/ZIP endpoints show a **Download file** link.
 
 ## 3. Run the tests
 
@@ -176,6 +176,7 @@ app/
   models.py             Job and Certificate tables + status enums
   schemas.py            Pydantic request/response models
   api/jobs.py           HTTP endpoints only (thin layer)
+  api/docs.py           Swagger examples and response documentation
   services/
     validation.py       Per-recipient validation
     jobs.py             DB operations: create job, counts, final status, retry reset
