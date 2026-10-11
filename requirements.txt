@@ -1,0 +1,13 @@
+fastapi==0.143.0
+uvicorn[standard]==0.54.0
+SQLAlchemy==2.1.4
+pydantic==2.14.0
+pydantic-settings==2.15.0
+email-validator==2.3.0
+reportlab==5.0.1
+psycopg[binary]==3.3.6   # PostgreSQL driver (only needed for Postgres)
+
+# testing
+pytest==9.1.1
+httpx==0.28.1
+pypdf==6.20.0
